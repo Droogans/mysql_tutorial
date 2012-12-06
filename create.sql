@@ -1,2 +1,36 @@
 
--- All tables used for ? kind of database
+-- All tables used for PLC monitoring database
+
+ENGINE = INNODB;
+
+CREATE TABLE IF NOT EXISTS PLCs(
+	id 				INT AUTO_INCREMENT PRIMARY KEY(id),
+	serialNumber 	VARCHAR(32) NOT NULL UNIQUE,
+	friendlyName 	VARCHAR(32) UNIQUE,
+	locName			VARCHAR(64) FOREIGN KEY(locName) REFERENCES
+		Locations(locName) ON DELETE RESTRICT
+);
+
+CREATE TABLE IF NOT EXISTS Locations(
+	id				INT AUTO_INCREMENT PRIMARY KEY,
+	name			VARCHAR(64) 
+);
+
+CREATE TABLE IF NOT EXISTS Installations(
+	plcID			INT NOT NULL,
+	engID			INT NOT NULL,
+	
+	PRIMARY KEY (plcID, engID),
+	UNIQUE INDEX(plcID, engID),
+	
+	FOREIGN KEY (plcID) REFERENCES
+		(PLCs.id) ON DELETE RESTRICT,
+	FOREIGN KEY (engID) REFERENCES
+		(Engineers.id) ON DELETE RESTRICT
+);
+
+CREATE TABLE IF NOT EXISTS Engineers(
+	id				INT AUTO_INCREMENT PRIMARY KEY,
+	fName			VARCHAR(64) NOT NULL,
+	lName			VARCHAR(64) NOT NULL
+);
