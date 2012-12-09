@@ -74,6 +74,11 @@ Getting Set Up
  - Setting up PythonAnywhere
  - Using Bash (`.bashrc`, `export EDITOR=emacs`)
  - Using Emacs (`mysql> edit`)
+ - Using git
 - Optional:
  - Setting up dropbox
- - Setting up git
+ 
+*META*
+------
+- Stop developing on master once the intial commit is finished
+ - make a branch for every lesson; end the master branch on switching branches
