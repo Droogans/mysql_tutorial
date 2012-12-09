@@ -14,13 +14,13 @@ a GUI-based development application writing logic for [PLCs][PLC_wiki], a very c
 of determining, among things, safety violations in machine-automated environments. These things run safety 
 stops when light curtains are breached, saving folks the risk of death and dismemberment when accessing 
 live running machines in the modern workplace. PLCs also, usually, are in charge of signaling your friendly
-neighborhood stoplight!
+neighborhood stoplight.
 
-More about PLCs, and their [importance to the world][Sutxnet].
+More about PLCs, and their [importance to the world][Stuxnet].
 
 Matt has heard a lot from his boss about stuff like Linux, databases, web sites and software code. These are things
 that Matt uses everyday, but never directly. Hopefully, with the help of this tutorial, Matt can learn how
-to use these things in the most efficient manner possible: from the command line.
+to use these things in the most efficient manner possible; from the command line.
 
 It may seem daunting at first, but if you consider that at some point, all computers operated from the command line,
 it's not such an obscure place to start learning about *actual* computers, and how to operate them.
@@ -35,7 +35,7 @@ hackers are still able to find jobs doing penetration tests for Fortune 500 comp
 Some can easily get by on a good smile and a USB flash drive, and yet, a brilliant scientists might actually *use*
 the command line to submit a patch on the new Mars rover hardware over at NASA. We'll focus on the second of these groups. 
 
-As a wonderful essay has implied, cars can be used as an analogy to help demonstrate the subjective differences operating systems.
+As [a wonderful essay][commandline_essay] has implied, cars can be used as an analogy to help demonstrate the subjective differences operating systems.
 
 The description used to introduce the reader to Linux is as follows, and I feel is quite humorous:
 
@@ -60,6 +60,7 @@ Are you ready? It's easy, you just need a web browser.
 
 [PLC_wiki]: http://en.wikipedia.org/wiki/Programmable_logic_controller "Wikipedia entry for PLCs"
 [Stuxnet]: http://en.wikipedia.org/wiki/Stuxnet#PLC_infection
+[commandline_essay]: https://github.com/bibanon/bibanon/wiki/In-the-Beginning-There-was-the-Command-Line
 
 Getting Set Up
 ==============
