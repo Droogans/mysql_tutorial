@@ -78,9 +78,10 @@ Getting Set Up
 
 There is an incredible website, developed by a rather...eccentric individual named [Harry Percival][HarryP] ([among others][Hansel]), which allows you
 to execute Python code in a browser. Certainly they will change names in the future, as this entire tutorial uses this 'Python' service to
-execute SQL statements in the built-in MySQL environment, along with Bash. 
+execute SQL statements in the built-in MySQL environment, along with Bash. Eventually, Python will become just another environment they offer in their service.
+And what a wonderful service it is.
 
-Note: MySQL is "the database", and Bash is "Linux". Although neither of these statements are correct...just go with it for now.
+Note: For the beginner, MySQL is "the database", and Bash is "Linux". Neither of these statements are correct...just go with it for now.
 
 To get setup, make sure you have an email account that you're comfortable using for an online service. Done?
 
