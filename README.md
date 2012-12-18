@@ -14,7 +14,12 @@ a GUI-based development application writing logic for [PLCs][PLC_wiki], a very c
 of determining, among things, safety violations in machine-automated environments. These things run safety 
 stops when light curtains are breached, saving folks the risk of death and dismemberment when accessing 
 live running machines in the modern workplace. PLCs also, usually, are in charge of signaling your friendly
-neighborhood stoplight.
+neighborhood stoplight. They are controlled by ladder logic, a type of programming that looks less like this:
+
+    if sensor.input.bias > daily_limit:
+	    signal.send(signal.STOP)
+		
+And [more like this][ladder_logic]. I am here to introduce Matt to code that more closely resembles the above.
 
 More about PLCs, and their [importance to the world][Stuxnet].
 
@@ -23,7 +28,7 @@ that Matt uses everyday, but never directly. Hopefully, with the help of this tu
 to use these things in the most efficient manner possible; from the command line.
 
 It may seem daunting at first, but if you consider that at some point, all computers operated from the command line,
-it's not such an obscure place to start learning about *actual* computers, and how to operate them.
+it's not such an obscure place to start learning about using computers, and how to manage them.
 
 What is the command line?
 -------------------------
@@ -35,9 +40,10 @@ hackers are still able to find jobs doing penetration tests for Fortune 500 comp
 Some can easily get by on a good smile and a USB flash drive, and yet, a brilliant scientists might actually *use*
 the command line to submit a patch on the new Mars rover hardware over at NASA. We'll focus on the second of these groups. 
 
-As [a wonderful essay][commandline_essay] has implied, cars can be used as an analogy to help demonstrate the subjective differences operating systems.
+As [a wonderful essay][commandline_essay] has implied, cars can be used as an 
+analogy to help demonstrate the subjective differences between operating systems.
 
-The description used to introduce the reader to Linux is as follows, and I feel is quite humorous:
+The description used to introduce the reader to Linux is as follows, and I feel it is quite humorous:
 
 > Linux ...[the dealership]... which is right next door, and which is not a business at all. It's a bunch of RVs, yurts, tepees, and 
 > geodesic domes set up in a field and organized by consensus. The people who live there are making tanks. These are not old-fashioned, 
@@ -53,20 +59,40 @@ The description used to introduce the reader to Linux is as follows, and I feel 
 > Hacker with bullhorn: "Save your money! Accept one of our free tanks! It is invulnerable, and can drive across rocks and swamps at ninety 
 > miles an hour while getting a hundred miles to the gallon!"
 
+> Prospective station wagon buyer: "I know what you say is true...but...er...I don't know how to maintain a tank!"
+
+> Bullhorn: "You don't know how to maintain a station wagon either!"
+
 It may be a bit of an exaggeration to claim these things, but I intend to show you how you can climb into one of these tanks, with almost no
-effort, and hopefully, learn some SQL in the process. 
+effort, and hopefully, learn some SQL in the process. From there, it'll be up to you to learn to maintain your station wagon and/or tank.
 
 Are you ready? It's easy, you just need a web browser.
 
 [PLC_wiki]: http://en.wikipedia.org/wiki/Programmable_logic_controller "Wikipedia entry for PLCs"
 [Stuxnet]: http://en.wikipedia.org/wiki/Stuxnet#PLC_infection
 [commandline_essay]: https://github.com/bibanon/bibanon/wiki/In-the-Beginning-There-was-the-Command-Line
+[ladder_logic]: http://www.contactandcoil.com/wp-content/uploads/ladder-logic-for-cat.png
 
 Getting Set Up
 ==============
 
+There is an incredible website, developed by a rather...eccentric individual named [Harry Percival][HarryP] ([among others][Hansel]), which allows you
+to execute Python code in a browser. Certainly they will change names in the future, as this entire tutorial uses this 'Python' service to
+execute SQL statements in the built-in MySQL environment, along with Bash. 
 
+Note: MySQL is "the database", and Bash is "Linux". Although neither of these statements are correct...just go with it for now.
 
+To get setup, make sure you have an email account that you're comfortable using for an online service. Done?
+
+Ok, next thing you need to do: visit this website: https://www.pythonanywhere.com/registration/register/free/
+
+Once you've registered, you should see something along the lines of [this][PythonAnywhereConsoles].
+
+You're just about ready to begin.
+
+[HarryP]: http://www.youtube.com/watch?v=e6NLAbgmRZ4&t=189
+[Hansel]: http://www.aychedee.com/2012/04/19/browser-based-consoles-for-the-ipad/
+[PythonAnywhereConsoles]: http://www.aychedee.com/static/pythonanywhere-console-nav.png
 
 
 *TODO*
@@ -74,7 +100,7 @@ Getting Set Up
 - Required:
  - Setting up PythonAnywhere
  - Using Bash (`.bashrc`, `export EDITOR=emacs`)
- - Using Emacs (`mysql> edit`)
+ - Using an editor (`mysql> edit`)
  - Using git
 - Optional:
  - Setting up dropbox
