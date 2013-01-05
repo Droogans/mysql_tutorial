@@ -25,19 +25,28 @@ These are the databases available to you. Continue with this command:
 
     show tables;
 	
+And the output:
+	
 	Empty set (0.00 sec)
 
 Hopefully this isn't too suprpising. We haven't done anything yet. However, databases come with plenty of data already in them. 
 There are tables of data that describe the database, and we'll look at that on in a moment by switching to it.
 
-    use information_schema;
+    mysql> use information_schema;
 	
 	Reading table information for completion of table and column names
 	You can turn off this feature to get a quicker startup with -A
 	
 	Database changed
 	
-There, we are now looking at a new set of tables. Let's try that last operation again.
+From now on I won't specify what your ouput should be. I will just print out the entire session of input/output. 
+If you're having an error, it may be because you copy and pasted everything into the browser? Don't copy and paste the `mysql>` part. 
+
+Actually, don't copy and paste *anything*. That's [no way to learn][Always_Type_Code] how to code! Type everything out yourself.
+
+[Always_Type_Code]: http://www.shockoe.com/blog/typingcodeout/
+	
+Anyway, we are now looking at a new set of tables. Let's try that last operation again.
 
 	mysql> show tables;
 	+---------------------------------------+
