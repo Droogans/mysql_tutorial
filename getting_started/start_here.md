@@ -276,8 +276,10 @@ But...how do we know which columns to ask for? Ah. Here is a good place to intro
 So there we have it. Exploring our database is easy with the built in `SHOW` statements for databases, tables in databases, and columns in tables.
 And now we also know how to look at specific information without using `SELECT * FROM TABLE_NAME`. 
 
-Just remember, in the real world there are many, many different ways to do things. This tutorial is meant only to show you how the `SHOW` statements work,
-and at the same time, introduce you to `SELECT` statements, as well as the `information_schema` database. The point is, don't do stuff like this, even though you can.
+Just remember, in the real world there are many, many different ways to do things. 
+This tutorial is meant only to show you how the `SHOW` statements work, and at the same time, introduce you to `SELECT` statements, as well as the `information_schema` database. 
+
+The point is, don't do stuff like this, even though you can.
 
 	mysql> SELECT TABLE_NAME, COLUMN_NAME, COLLATION_NAME FROM COLUMNS WHERE TABLE_NAME LIKE 'COLUMNS';
 	+------------+--------------------------+-----------------+
