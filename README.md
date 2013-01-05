@@ -90,24 +90,14 @@ Ok, next thing you need to do: visit this website: https://www.pythonanywhere.co
 
 Once you've registered, you should see something along the lines of [this][PythonAnywhereConsoles].
 
-You're just about ready to begin.
+You're just about ready to begin. Head to the [Getting Started][getting_started] folder to continue.
 
 [HarryP]: http://www.youtube.com/watch?v=e6NLAbgmRZ4&t=189
 [Hansel]: http://www.aychedee.com/2012/04/19/browser-based-consoles-for-the-ipad/
 [PythonAnywhereConsoles]: http://www.aychedee.com/static/pythonanywhere-console-nav.png
 [Python]: http://docs.python.org/2/tutorial/
+[getting_started]: https://github.com/Droogans/mysql_tutorial/blob/master/getting_started/start_here.md
 
-
-
-*TODO*
------
-- Required:
- - Setting up PythonAnywhere
- - Using Bash (`.bashrc`, `export EDITOR=emacs`)
- - Using an editor (`mysql> edit`)
- - Using git
-- Optional:
- - Setting up dropbox
  
 *META*
 ------
