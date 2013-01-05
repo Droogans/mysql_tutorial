@@ -109,11 +109,12 @@ That time we got a little scrolling action going on. Plus, there's all kinds of 
 
 Let's try that again. Scroll up to the top of your output, and read the column names. There should be two distinct rows of columns, that look something like this:
 
-    +---------------+--------------------+---------------------------------------+-------------+--------+---------+------------+------------+----------------+-------------+-----------------+--------------+-----------+----------------+-----
-    ----------------+---------------------+------------+-----------------+----------+-----------------+---------------+
-    | TABLE_CATALOG | TABLE_SCHEMA       | TABLE_NAME                            | TABLE_TYPE  | ENGINE | VERSION | ROW_FORMAT | TABLE_ROWS | AVG_ROW_LENGTH | DATA_LENGTH | MAX_DATA_LENGTH | INDEX_LENGTH | DATA_FREE | AUTO_INCREMENT | CREATE_TIME         | UPDATE_TIME         | CHECK_TIME | TABLE_COLLATION | CHECKSUM | CREATE_OPTIONS  | TABLE_COMMENT |
-    +---------------+--------------------+---------------------------------------+-------------+--------+---------+------------+------------+----------------+-------------+-----------------+--------------+-----------+----------------+-----
-    ----------------+---------------------+------------+-----------------+----------+-----------------+---------------+
+	+---------------+--------------------+---------------------------------------+-------------+--------+---------+------------+------------+----------------+-------------+-----------------+--------------+-----------+----------------+-----
+	----------------+---------------------+------------+-----------------+----------+-----------------+---------------+
+	| TABLE_CATALOG | TABLE_SCHEMA       | TABLE_NAME                            | TABLE_TYPE  | ENGINE | VERSION | ROW_FORMAT | TABLE_ROWS | AVG_ROW_LENGTH | DATA_LENGTH | MAX_DATA_LENGTH | INDEX_LENGTH | DATA_FREE | AUTO_INCREMENT | CREA
+	TE_TIME         | UPDATE_TIME         | CHECK_TIME | TABLE_COLLATION | CHECKSUM | CREATE_OPTIONS  | TABLE_COMMENT |
+	+---------------+--------------------+---------------------------------------+-------------+--------+---------+------------+------------+----------------+-------------+-----------------+--------------+-----------+----------------+-----
+	----------------+---------------------+------------+-----------------+----------+-----------------+---------------+
 	
 Pretty ugly? Notice that instead of one row of column names, we have two. This is because of wrapping. 
 Just try to focus on the top left-most column name: `TABLE_CATALOG`. That's the first column name.
