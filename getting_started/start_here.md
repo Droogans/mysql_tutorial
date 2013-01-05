@@ -164,7 +164,9 @@ Let's try to get just some of the more important information, and cut down on al
 	+---------------------------------------+
 	35 rows in set (0.10 sec)	
 	
-Look familiar? Let's try getting data from two columns.
+Look familiar? Yes, that's equivilent to `show tables` for the whole database. Like I said, this is a database of information about the database.
+
+Let's try getting data from two columns.
 
 	mysql> SELECT TABLE_NAME, TABLE_COLLATION FROM TABLES;
 	+---------------------------------------+-----------------+
