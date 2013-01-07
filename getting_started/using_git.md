@@ -16,16 +16,18 @@ I could go on and describe in detail what keeping a history of changes is all ab
 
 If you skipped that video, please go back and watch the whole thing, unless you've had experience working with version control. I promise, those five minutes will go faster than you think.
 
-Now that you understand what git is, let's start using it. Head back to your PythonAnywhere consoles, and select a Bash console (under "Others"). Before you can use git, you must understand some Bash.
+Now that you understand what git is, let's start using it. Head back to your PythonAnywhere consoles, and select a bash console (under "Others"). Before you can use git, you must understand some bash.
 
-Bash
+bash
 ====
 
-Once your Bash console has finished loading, uou should see what's called prompt. It'll look something like this:
+Once your bash console has finished loading, you should see what's called a prompt. It'll look something like this:
 
     04:04 ~ $ 
 	
-And a blinking cursor at the end, taunting you. If you don't know what to do, this can be very intimidating. Here's a solid tip that works almost anywhere:
+It will have a blinking cursor at the end, taunting you with it's quiet, flashing presence. If you don't know what to do, this can be very intimidating. 
+
+Here's a solid tip that works almost anywhere:
 
     04:04 ~ $ help
 	GNU bash, version 4.1.5(1)-release (x86_64-pc-linux-gnu)
@@ -39,14 +41,14 @@ And a blinking cursor at the end, taunting you. If you don't know what to do, th
 Basically what this says is that we're using `bash`, which is an implementation of a program called a shell. There are many different [types of shell programs][Shell_List].
 [Shell_List]: http://en.wikipedia.org/wiki/Unix_shell#Shell_categories
 
-A shell is, simply, the black screen we're looking at, and is most often called a terminal in the real world. That big list at the bottom of the output is some of the more common commands you can use.
+A shell is, simply, the black screen we're looking at, and is most often called a terminal. That big list at the bottom of the output is some of the more common commands you can use.
 
 Let's try a few of them.
 
     04:04 ~ $ pwd
 	/home/USERNAME
 	
-`pwd` stands for "print working directory". If you've used Windows before, you might know them as folders. If it helps, you could imagine directory looking like this in Windows
+`pwd` stands for "print working directory". If you've used Windows before, you might know of directories as folders. If it helps, you could imagine this directory looking like this in Windows
 
     C:\Users\USERNAME\
 	
@@ -74,16 +76,16 @@ To help you visualize what you just did, you more or less "double clicked" the U
 Paths
 -----
 
-The `/` directory is an important concept in Linux filesystems, sometimes it can frustrating at first. The key is to understand an *absolute* filepath, and a *relative* filepath. Once you get that down, you'll be ready to start using the command line with far less frustration.
+The `/` directory is an important concept in Linux filesystems, sometimes it can be frustrating at first. The key is to understand what an *absolute* filepath is, and what a *relative* filepath is. Once you get that down, you'll be ready to start using the command line with far less frustration.
 
 An example:
 
     04:04 /home $ cd home/USERNAME
-	bash: cd: home/ayurisich: No such file or directory
+	bash: cd: home/USERNAME: No such file or directory
 	
 So we got an error message. The error line basically says 
 
-> `bash` told me that the `cd` operation tried to use `home/ayurisich` and failed. Why? `No such file or directory`.
+> `bash` told me that the `cd` operation tried to use `home/USERNAME` and failed. Why? `No such file or directory`.
 
 The problem with the above command was because we tried to go to a `home` directory while already inside `/home`. Which means we just tried to navigate to this:
 
@@ -167,11 +169,25 @@ Now that you're able to get around a shell, you're ready to start using git. Fir
 
     git clone https://github.com/Droogans/mysql_tutorial.git
 	
-*Note: you have to use `ctrl + shift + v` to paste in PythonAnywhere!*
+> Note: you have to use `ctrl + shift + v` to paste in PythonAnywhere
 	
-This will make a folder called `mysql_tutorial` in your home directory. Once it's finished, list the files inside of it. You'll notice that it looks like a copy of everything on the website. Although it s technically a copy, it is much more than that. You also cloned all the changes I've ever made to this project, and all of that stuff lives in a hidden folder called `.git`.
+This will make a folder called `mysql_tutorial` in your home directory. Once it's finished, list the files inside of it. Except this time, when you type out the name of the `mysql_tutorial` folder, just type out the first part of the name: `my` or something. Then press `tab`. Bash can figure out the full name for you if there's nothing else with a similar name. This saves a lot of typing, especially for long directory or file names.
 
-Don't touch this folder. If you break it, I can't help you (likely, no one can).
+    04:04 ~ $ ls ./mysql_tutorial/
+	README.md  getting_started  problems  solutions
+
+You'll notice that it looks like a copy of everything on the you see here on github. Although it s technically a copy, it is much more than that. You also cloned all the changes I've ever made to this project, and all of that stuff lives in a hidden folder called `.git`.
+
+    04:04 ~ $ ls -a ./mysql_tutorial/
+	.  ..  .git  .gitignore  README.md  getting_started  problems  solutions
+
+Notice that this time I used `ls -a`, instead of `ls --all`. They do exactly the same thing. One is easier to type out, while the other is easier to read.
+
+Whatever you do, don't touch the `.git` folder. If you break it, I can't help you (likely, no one can).
+
+
+Checking out git
+----------------
 
 If you change directories into this new `mysql_tutorial` directory, you should see that git adds a special bit of text to your prompt. It will look something like this:
 
@@ -183,7 +199,7 @@ Next, take a look at the `problems` directory, and read the file that's in there
 
     04:04 ~/mysql_tutorial (master)$ cat ./problems/first_problem.txt
 	
-Once you've got an answer, use a text editor to write a response.
+Once you've got an answer, use a text editor to write a response. We'll use Nano, because it's pretty similar to a lot of "normal" text editors, like Notepad.
 
     04:04 ~/mysql_tutorial $ nano ./solutions/first_solution.txt
 	
@@ -197,19 +213,33 @@ Commiting your First Solution
 Now that you've got a solution to the first problem, let's see what git thinks of this:
 
     04:04 ~/mysql_tutorial (master)$ git status
+	# On branch master
+	# Changes not staged for commit:
+	#   (use "git add <file>..." to update what will be committed)
+	#   (use "git checkout -- <file>..." to discard changes in working directory)
+	#
+	#       modified:   solutions/first_solution.txt
+	#
+	no changes added to commit (use "git add" and/or "git commit -a")
 	
 This will display the changes that you've made to any files that git knows about. Obviously, `first_solution.txt` has been changed, so let's add those changes and make a new version of the project.
 
     04:04 ~/mysql_tutorial (master)$ git add ./solutions/first_solution.txt
 	04:04 ~/mysql_tutorial (master)$ git status
-	
-Notice that git added this file as "staged". This means that you have prepped it for a commit, but you haven't actually committed anything yet. This is nice becuase you may add a file that you don't actually want to commit, so you can get a second chance to look things over before committing.
+	# On branch master
+	# Changes to be committed:
+	#   (use "git reset HEAD <file>..." to unstage)
+	#
+	#       modified:   solutions/first_solution.txt
+	#
+		
+Notice that git added this file "to be committed". This is also known as "staged". This means that you have prepped it for a commit, but you haven't actually committed anything yet. This is nice becuase you may add a file that you don't actually want to commit, so you can get a second chance to look things over before committing.
 
 Committing is pretty easy. You tell git to commit, and pass it a switch: `-m`, for *message*, or a note to yourself and others about what you did. Here's an example.
 
     04:04 ~/mysql_tutorial (master)$ git commit -m "solved the St. Ives riddle"
 	
-As a helpful tip from past experience, *always* describe what you did in a commit message, not what the goal was. A commit message of "commit first_solution.txt" isn't helpful. What did first_solution.txt need to have that made it worthy of a commit? What prompted it?
+As a helpful tip from past experience, *always* describe what you did in a commit message, not what the goal was. A commit message of `"commit first_solution.txt"` isn't helpful. What did `first_solution.txt` need to have that made it worthy of a commit? What prompted the change? What does the change include? These are all more helpful than noting that a change has occured.
 
 Also, always try to keep commit messages to under 80 characters. This is useful for going back and reading a list of changes over time and not having some commit messages be hard to read.
 
