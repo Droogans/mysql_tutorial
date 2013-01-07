@@ -97,9 +97,3 @@ You're just about ready to begin. Head to the [Getting Started][getting_started]
 [PythonAnywhereConsoles]: http://www.aychedee.com/static/pythonanywhere-console-nav.png
 [Python]: http://docs.python.org/2/tutorial/
 [getting_started]: https://github.com/Droogans/mysql_tutorial/blob/master/getting_started/start_here.md
-
- 
-*META*
-------
-- Stop developing on master once the intial commit is finished
- - make a branch for every lesson; end the master branch on switching branches
