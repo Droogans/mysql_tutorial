@@ -125,19 +125,19 @@ Here's a little table showing you in a more graphical way what I just did:
     /home/.
 	      ^ this means the current directory
 
-	  
+``
 	cd ..
  
 	/.
 	 ^ the current directory is now "up" one from where we were before
 
-	 
+`` 
 	cd ~
- 
+
 	/home/USERNAME/.
 	               ^ you are here
 
-
+``
 	cd ..
  
 	/home/.
