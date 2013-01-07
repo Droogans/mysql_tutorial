@@ -321,13 +321,8 @@ The point is, don't do stuff like this, even though you can.
 	
 Just use the appropriate `SHOW` statement.
 
-	
-*TODO*
------
-- Required:
- - Setting up PythonAnywhere
- - Using Bash (`.bashrc`, `export EDITOR=emacs`)
- - Using an editor (`mysql> edit`)
- - Using git
-- Optional:
- - Setting up dropbox
+This is a good stopping point for right now.
+
+Here is a link to the [next walkthrough][Next_Walkthrough].
+
+[Next_Walkthrough]: https://github.com/Droogans/mysql_tutorial/blob/master/getting_started/using_git.md
