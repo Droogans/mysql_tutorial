@@ -1,0 +1,14 @@
+
+Welcome to the first problem! When you get an answer, write it to ~/mysql_tutorial/solutions/first_solution.txt.
+
+This is just a fun question to get you started on using git. The answer isn't important. Changing a file and commiting it to git is, though.
+
+Here's the first problem:
+
+As I was going to St Ives
+I met a man with seven wives
+Every wife had seven sacks
+Every sack had seven cats
+Every cat had seven kits
+Kittens, cats, sacks, wives.
+How many were going to St Ives?
