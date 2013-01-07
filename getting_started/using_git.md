@@ -127,26 +127,22 @@ Here's a little table showing you in a more graphical way what I just did:
 
 	  
 	cd ..
-
-
+ 
 	/.
 	 ^ the current directory is now "up" one from where we were before
 
 	 
 	cd ~
-
-	
+ 
 	/home/USERNAME/.
 	               ^ you are here
 
 
 	cd ..
-
-
+ 
 	/home/.
 	      ^ we are now back where we started
 		  
-
 In case you're wondering, there is a "Forward" button like in Windows too: `cd -`, but it can be confusing, so I'll leave that up to you to try out on your own.
 
 When I said that the `.` means the current directory, I meant it literally. There is absolutely no difference between these two commands:
